@@ -2,6 +2,7 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "@inertiajs/inertia": "^0.11.1",
     "@inertiajs/react": "^2.0.8",
     "@vitejs/plugin-react": "^4.4.1",
     "bulma": "^1.0.4",
