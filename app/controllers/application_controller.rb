@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   private
 
   def set_current_user_prop
-    @current_user_prop = current_user&.as_json(only: [ :id, :email ])
+    @current_user_prop = current_user&.as_json(only: [ :id, :email, :admin ])
   end
 end

@@ -40,6 +40,12 @@ function Header() {
             <Link href="/Knowledge" className="navbar-item">
               Knowledge Center
             </Link>
+
+            {currentUser?.admin && (
+            <Link className="navbar-item">
+              Manage Birds
+            </Link>
+          )}
           </div>
 
           <div className="navbar-end">
