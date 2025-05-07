@@ -14,7 +14,20 @@ function Birds({birds}){
     <>
       <Header />
       <div className="buttons has-addons is-right pr-3 mt-5">
-      <button className="button is-primary " type="button" onClick={openModal}>Add Bird</button>
+        <button className="button is-primary " type="button" onClick={openModal}>Add Bird</button>
+      </div>
+
+      <div className="is-flex is-justify-content-center pr-3 mt-5">
+        <div className="field is-grouped">
+          <p className="control is-expanded">
+            <input className="input" type="text" placeholder="Search Birds"/>
+          </p>
+          <p className="control">
+            <button className="button is-info" type='button'>
+              Search
+            </button>
+          </p>
+        </div>
       </div>
       {isModalOpen && <AddBird closeModal={closeModal} />} 
       <div className="container is-flex is-justify-content-center mt-5">

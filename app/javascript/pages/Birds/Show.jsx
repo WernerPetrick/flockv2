@@ -1,7 +1,20 @@
 import { Link, router } from '@inertiajs/react';
+import { useState, useEffect } from 'react';
 import Header from "../components/Header";
+import EditBird from './Modals/EditBird';
 
-function Show({ bird }) {
+function Show({ bird, edit_mode = false }) {
+  const [isModalOpen, setIsModalOpen] = useState(edit_mode);
+  
+  useEffect(() => {
+    if (edit_mode) {
+      setIsModalOpen(true);
+    }
+  }, [edit_mode]);
+  
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   const handleDelete = () => {
     if (confirm('Are you sure you want to delete this bird?')) {
       router.delete(`/birds/${bird.id}`, {
@@ -29,9 +42,10 @@ function Show({ bird }) {
         <p><strong>Size:</strong> {bird.size}</p>
       </div>
       <div className="buttons is-flex is-justify-content-center mt-5 mb-5">
-        <Link href={`/birds/${bird.id}/edit`} className="button is-warning">Edit</Link>
+        <button className="button is-warning" onClick={openModal} type='button'>Edit</button>
         <button onClick={handleDelete} className="button is-danger" type='button'>Delete</button>
       </div>
+      {isModalOpen && <EditBird bird={bird} closeModal={closeModal} />} 
     </>
   );
 }
