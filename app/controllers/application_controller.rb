@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_action :set_current_user_prop
 
+  inertia_share current_user: -> { @current_user_prop }
+
   private
 
   def set_current_user_prop
