@@ -42,7 +42,7 @@ function Header() {
             </Link>
 
             {currentUser?.admin && (
-            <Link className="navbar-item">
+            <Link href="/birds" className="navbar-item">
               Manage Birds
             </Link>
           )}
@@ -51,7 +51,7 @@ function Header() {
           <div className="navbar-end">
             {currentUser ? (
               <>
-                <span className="">{currentUser.email}</span>
+                <Link href="/profile" className="button mr-4">Profile</Link>
                 <button
                   onClick={handleSignOut}
                   className="navbar-item button is-danger is-outlined"
