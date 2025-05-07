@@ -6,9 +6,8 @@ function Show({ bird }) {
     if (confirm('Are you sure you want to delete this bird?')) {
       router.delete(`/birds/${bird.id}`, {
         onSuccess: () => {
-          // Optionally, you can redirect or update the UI when successful
           alert('Bird was successfully deleted');
-          window.location.href = '/birds'; // Redirect to the birds list page
+          window.location.href = '/birds';
         },
         onError: () => {
           alert('There was an error deleting the bird.');
