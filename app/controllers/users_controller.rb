@@ -19,6 +19,26 @@ class UsersController < Clearance::UsersController
     render inertia: "User/Profile"
   end
 
+  def seen_birds
+    render inertia: "User/SeenBirds"
+  end
+
+  def wishlist
+    render inertia: "User/Wishlist"
+  end
+
+  def email_settings
+    render inertia: "User/EmailSettings"
+  end
+
+  def authentication
+    render inertia: "User/Authentication"
+  end
+
+  def submissions
+    render inertia: "User/Submissions"
+  end
+
   private
 
   def user_params

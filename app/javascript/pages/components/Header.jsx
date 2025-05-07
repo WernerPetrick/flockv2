@@ -33,6 +33,10 @@ function Header() {
               About
             </Link>
 
+            <Link href="/Explore" className="navbar-item">
+              Explore Birds
+            </Link>
+
             <Link href="/Knowledge" className="navbar-item">
               Knowledge Center
             </Link>
