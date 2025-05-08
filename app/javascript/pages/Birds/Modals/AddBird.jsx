@@ -5,6 +5,7 @@ function AddBird({ closeModal }) {
     bird: {
       common_name: '',
       scientific_name: '',
+      species: '',
       description: '',
       habitat: '',
       size: '',
@@ -71,6 +72,20 @@ function AddBird({ closeModal }) {
                   id="scientific_name"
                   name="scientific_name"
                   value={data.scientific_name}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label" htmlFor="species">Species</label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  id="species"
+                  name="species"
+                  value={data.species}
                   onChange={handleChange}
                 />
               </div>
