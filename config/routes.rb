@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root "pages#index"
 
   get "profile", to: "users#profile"
+  get "explore", to: "birds#explore"
+  get "explore/:id", to: "birds#explore", as: :explore_bird
 
   # Update this when the Bird and Sighting model is introduced
   get "profile/seen-birds", to: "users#seen_birds"
