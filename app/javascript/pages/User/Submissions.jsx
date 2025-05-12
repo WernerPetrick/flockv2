@@ -1,9 +1,13 @@
+import NewSubmission from '../Submissions/New';
+import ShowSubmissions from '../Submissions/Show';
 import Profile from '../User/Profile'
 
 function Submissions() {
   return (
     <div>
-      <h1>This is the Submissions page.</h1>
+      <NewSubmission/>
+      <hr />
+      <ShowSubmissions/>
     </div>
   );
 }

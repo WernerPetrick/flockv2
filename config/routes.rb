@@ -20,4 +20,12 @@ Rails.application.routes.draw do
   post "/sign_in", to: "sessions#create"
 
   resources :birds
+  resources :submissions
+
+  resources :submissions, only: [ :index, :show, :update ] do
+    member do
+      patch :approve
+      patch :reject
+    end
+  end
 end

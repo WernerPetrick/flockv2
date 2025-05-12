@@ -42,9 +42,14 @@ function Header() {
             </Link>
 
             {currentUser?.admin && (
-            <Link href="/birds" className="navbar-item">
-              Manage Birds
-            </Link>
+            <>
+              <Link href="/birds" className="navbar-item">
+                Manage Birds
+              </Link>
+              <Link href="/submissions" className="navbar-item">
+                Submissions
+              </Link>
+            </>
           )}
           </div>
 

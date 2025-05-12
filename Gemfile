@@ -56,6 +56,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "letter_opener"
 end
 
 group :test do
@@ -67,3 +68,4 @@ end
 gem "inertia_rails", "~> 3.8"
 gem "vite_rails", "~> 3.0"
 gem "clearance"
+gem "active_storage_validations"

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for your submission, <%= @user.email %>!</h1>
+    <p>
+      We've received your bird photo submission and it's now awaiting review.
+    </p>
+    <% if @submission.submitted_common_name.present? %>
+      <p>
+        <strong>Submitted Common Name:</strong> <%= @submission.submitted_common_name %>
+      </p>
+    <% end %>
+    <p>
+      <strong>Number of Photos Submitted:</strong> <%= @submission.photos.count %>
+    </p>
+    <p>
+      You can view your submissions <a href="<%= submissions_url %>">here</a>.
+    </p>
+    <p>Thanks for contributing to Flock!</p>
+  </body>
+</html>
